@@ -1,0 +1,16 @@
+job format: conv7 (7 writes)   pairs of approved jobs: 200   seed: 2026
+control, untouched approved job runs as approved: R1 200/200, R2 200/200, R3 200/200, R4 200/200
+
+MIX: first k writes of job X, rest from job Y
+release rule                              attempts  writes reached  unapproved run
+each write: tag only                          1200            1200            1000
+each write: tag, forward-only counter         1200            1200            1000
+each write: tag, consecutive counter          1200            1200               0
+whole job (WADJET rule)                       1200               0               0
+
+CUT SHORT: job X in full, then only the first k writes of job Y
+release rule                              attempts  writes reached registers mixed
+each write: tag only                          1200            1200            1000
+each write: tag, forward-only counter         1200            1200            1000
+each write: tag, consecutive counter          1200            1200            1000
+whole job (WADJET rule)                       1200               0               0

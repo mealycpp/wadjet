@@ -1,0 +1,16 @@
+job format: gemm12 (12 writes)   pairs of approved jobs: 1000   seed: 2026
+control, untouched approved job runs as approved: R1 1000/1000, R2 1000/1000, R3 1000/1000, R4 1000/1000
+
+MIX: first k writes of job X, rest from job Y
+release rule                              attempts  writes reached  unapproved run
+each write: tag only                         11000           11000            8000
+each write: tag, forward-only counter        11000           11000            8000
+each write: tag, consecutive counter         11000           11000               0
+whole job (WADJET rule)                      11000               0               0
+
+CUT SHORT: job X in full, then only the first k writes of job Y
+release rule                              attempts  writes reached registers mixed
+each write: tag only                         11000           11000            8000
+each write: tag, forward-only counter        11000           11000            8000
+each write: tag, consecutive counter         11000           11000            8000
+whole job (WADJET rule)                      11000               0               0
