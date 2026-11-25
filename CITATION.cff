@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If this work is used, please cite it as below."
+title: "WADJET: Whole-Job Authorization and Dispatch for Job Execution Trust on FPGA System-on-Chip Accelerators"
+type: software
+authors:
+  - family-names: "El-Hadedy"
+    given-names: "Mohamed"
+    email: "mealy@cpp.edu"
+    affiliation: "California State Polytechnic University, Pomona"
+date-released: "2026-11-24"
+url: "https://github.com/mealycpp/wadjet"
+repository-code: "https://github.com/mealycpp/wadjet"
+keywords:
+  - "FPGA system-on-chip"
+  - "processor-accelerator interface"
+  - "accelerator control"
+  - "hardware security"
+  - "replay protection"
+  - "Ascon"
